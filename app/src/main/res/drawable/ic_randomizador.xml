@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Setas embaralhadas: ícone do Randomizador de Palavras. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <path
+        android:pathData="M6,15 L13,15 C21,15 26,33 34,33 L41,33 M6,33 L13,33 C21,33 26,15 34,15 L41,15 M37,11 L41,15 L37,19 M37,29 L41,33 L37,37"
+        android:strokeWidth="4.5"
+        android:strokeColor="@color/brilho_verde"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M6,15 L13,15 C21,15 26,33 34,33 L41,33 M6,33 L13,33 C21,33 26,15 34,15 L41,15 M37,11 L41,15 L37,19 M37,29 L41,33 L37,37"
+        android:strokeWidth="1.8"
+        android:strokeColor="@color/neon_verde"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

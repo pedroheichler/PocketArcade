@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 5 · Cofre do Código Secreto -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rolagemCofre"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tela"
+    android:fillViewport="true"
+    tools:context=".CofreActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_tela">
+
+        <include
+            android:id="@+id/cabecalho"
+            layout="@layout/cabecalho_desafio" />
+
+        <!-- O cofre: quatro casas escondidas e o contador de tentativas -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCofre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            app:strokeColor="@color/neon_laranja">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/espaco_g">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imagemCofre"
+                        android:layout_width="@dimen/icone_painel"
+                        android:layout_height="@dimen/icone_painel"
+                        android:contentDescription="@string/cd_cofre"
+                        android:src="@drawable/ic_cofre" />
+
+                    <TextView
+                        android:id="@+id/textoSubtitulo"
+                        style="@style/Texto.Arcade.Corpo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/espaco_g"
+                        android:layout_weight="1"
+                        tools:text="Jogador, o cofre esconde quatro dígitos diferentes." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/containerSlots"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_g"
+                    android:contentDescription="@string/cd_cofre_oculto"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/slot1"
+                        style="@style/Texto.Arcade.Digito"
+                        android:layout_width="@dimen/slot_cofre"
+                        android:layout_height="@dimen/slot_cofre"
+                        android:layout_margin="@dimen/espaco_xs"
+                        android:background="@drawable/bg_slot"
+                        android:importantForAccessibility="no"
+                        android:text="@string/cofre_slot_oculto"
+                        android:textSize="@dimen/texto_slot" />
+
+                    <TextView
+                        android:id="@+id/slot2"
+                        style="@style/Texto.Arcade.Digito"
+                        android:layout_width="@dimen/slot_cofre"
+                        android:layout_height="@dimen/slot_cofre"
+                        android:layout_margin="@dimen/espaco_xs"
+                        android:background="@drawable/bg_slot"
+                        android:importantForAccessibility="no"
+                        android:text="@string/cofre_slot_oculto"
+                        android:textSize="@dimen/texto_slot" />
+
+                    <TextView
+                        android:id="@+id/slot3"
+                        style="@style/Texto.Arcade.Digito"
+                        android:layout_width="@dimen/slot_cofre"
+                        android:layout_height="@dimen/slot_cofre"
+                        android:layout_margin="@dimen/espaco_xs"
+                        android:background="@drawable/bg_slot"
+                        android:importantForAccessibility="no"
+                        android:text="@string/cofre_slot_oculto"
+                        android:textSize="@dimen/texto_slot" />
+
+                    <TextView
+                        android:id="@+id/slot4"
+                        style="@style/Texto.Arcade.Digito"
+                        android:layout_width="@dimen/slot_cofre"
+                        android:layout_height="@dimen/slot_cofre"
+                        android:layout_margin="@dimen/espaco_xs"
+                        android:background="@drawable/bg_slot"
+                        android:importantForAccessibility="no"
+                        android:text="@string/cofre_slot_oculto"
+                        android:textSize="@dimen/texto_slot" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textoTentativas"
+                    style="@style/Texto.Arcade.Legenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_m"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/neon_laranja"
+                    tools:text="Tentativas restantes: 8 de 8" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Conclusão na mesma tela: vitória ou derrota, tentativas e tempo -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardConclusao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/arcade_superficie_alta"
+            app:strokeColor="@color/neon_amarelo"
+            app:strokeWidth="@dimen/borda_neon"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/espaco_g">
+
+                <TextView
+                    android:id="@+id/textoConclusaoTitulo"
+                    style="@style/Texto.Arcade.Titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Cofre aberto!" />
+
+                <TextView
+                    android:id="@+id/textoConclusaoMensagem"
+                    style="@style/Texto.Arcade.Corpo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:gravity="center"
+                    android:textColor="@color/arcade_texto"
+                    tools:text="Parabéns, Jogador! Você descobriu o código 4271." />
+
+                <TextView
+                    android:id="@+id/textoConclusaoEstatisticas"
+                    style="@style/Texto.Arcade.Legenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    tools:text="Tentativas usadas: 5 de 8 · Tempo: 1 min 05 s" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoNovaPartida"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_g"
+                    android:text="@string/acao_nova_partida"
+                    android:textColor="@color/texto_sobre_neon"
+                    app:backgroundTint="@color/neon_amarelo" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPalpite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:hint="@string/cofre_campo"
+            app:boxStrokeColor="@color/borda_campo_cofre"
+            app:counterEnabled="true"
+            app:counterMaxLength="@integer/tamanho_codigo"
+            app:hintTextColor="@color/neon_laranja"
+            app:placeholderText="@string/cofre_placeholder">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoPalpite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="0123456789"
+                android:fontFamily="monospace"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="@integer/tamanho_codigo"
+                android:maxLines="1"
+                android:textSize="@dimen/texto_digito" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoTentar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:text="@string/acao_tentar"
+            android:textColor="@color/texto_sobre_neon"
+            app:backgroundTint="@color/neon_laranja" />
+
+        <!-- Histórico textual logo abaixo do campo -->
+        <TextView
+            style="@style/Texto.Arcade.Secao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_gg"
+            android:text="@string/cofre_historico" />
+
+        <TextView
+            android:id="@+id/textoHistoricoVazio"
+            style="@style/Texto.Arcade.Legenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:text="@string/cofre_historico_vazio" />
+
+        <LinearLayout
+            android:id="@+id/containerHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:orientation="vertical" />
+
+        <!-- Legenda das cores -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardLegenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_gg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/espaco_g">
+
+                <TextView
+                    style="@style/Texto.Arcade.Overline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cofre_legenda_titulo"
+                    android:textColor="@color/neon_laranja" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_m"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/legenda_cor"
+                        android:layout_height="@dimen/legenda_cor"
+                        android:background="@drawable/bg_tile"
+                        android:backgroundTint="@color/pista_verde" />
+
+                    <TextView
+                        style="@style/Texto.Arcade.Corpo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/espaco_m"
+                        android:layout_weight="1"
+                        android:text="@string/cofre_legenda_verde" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/legenda_cor"
+                        android:layout_height="@dimen/legenda_cor"
+                        android:background="@drawable/bg_tile"
+                        android:backgroundTint="@color/pista_amarelo" />
+
+                    <TextView
+                        style="@style/Texto.Arcade.Corpo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/espaco_m"
+                        android:layout_weight="1"
+                        android:text="@string/cofre_legenda_amarelo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/legenda_cor"
+                        android:layout_height="@dimen/legenda_cor"
+                        android:background="@drawable/bg_tile"
+                        android:backgroundTint="@color/pista_cinza" />
+
+                    <TextView
+                        style="@style/Texto.Arcade.Corpo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/espaco_m"
+                        android:layout_weight="1"
+                        android:text="@string/cofre_legenda_cinza" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

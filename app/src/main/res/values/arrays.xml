@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Categorias do Randomizador. A ordem casa com cores_categorias e exemplos_por_categoria. -->
+    <string-array name="categorias">
+        <item>Filmes</item>
+        <item>Comidas</item>
+        <item>Lugares</item>
+        <item>Desafios</item>
+        <item>Jogos</item>
+    </string-array>
+
+    <array name="cores_categorias">
+        <item>@color/neon_magenta</item>
+        <item>@color/neon_laranja</item>
+        <item>@color/neon_ciano</item>
+        <item>@color/neon_verde</item>
+        <item>@color/neon_amarelo</item>
+    </array>
+
+    <array name="exemplos_por_categoria">
+        <item>@array/exemplos_filmes</item>
+        <item>@array/exemplos_comidas</item>
+        <item>@array/exemplos_lugares</item>
+        <item>@array/exemplos_desafios</item>
+        <item>@array/exemplos_jogos</item>
+    </array>
+
+    <string-array name="exemplos_filmes">
+        <item>Interestelar</item>
+        <item>De Volta para o Futuro</item>
+        <item>Matrix</item>
+    </string-array>
+
+    <string-array name="exemplos_comidas">
+        <item>Pão de queijo</item>
+        <item>Feijoada</item>
+        <item>Açaí</item>
+    </string-array>
+
+    <string-array name="exemplos_lugares">
+        <item>Chapada dos Veadeiros</item>
+        <item>Ouro Preto</item>
+        <item>Fernando de Noronha</item>
+    </string-array>
+
+    <string-array name="exemplos_desafios">
+        <item>Fazer 10 polichinelos</item>
+        <item>Imitar um robô</item>
+        <item>Contar uma piada</item>
+    </string-array>
+
+    <string-array name="exemplos_jogos">
+        <item>Pac-Man</item>
+        <item>Tetris</item>
+        <item>Street Fighter II</item>
+    </string-array>
+</resources>

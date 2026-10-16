@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Durações das animações (todas entre 300 e 700 ms) -->
+    <integer name="duracao_curta">300</integer>
+    <integer name="duracao_media">450</integer>
+    <integer name="duracao_longa">600</integer>
+    <integer name="atraso_tile">90</integer>
+
+    <integer name="max_apelido">16</integer>
+    <integer name="max_mensagem">280</integer>
+    <integer name="max_valor">30</integer>
+    <integer name="tamanho_codigo">4</integer>
+    <integer name="colunas_grade">2</integer>
+</resources>

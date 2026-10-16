@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Interrogação: jogada ainda não escolhida na Arena. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <path
+        android:pathData="M17,17 C17,9.5 31,9.5 31,17 C31,22.5 24,22 24,28.5"
+        android:strokeWidth="2.6"
+        android:strokeColor="@color/arcade_texto_suave"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="@color/arcade_texto_suave"
+        android:pathData="M22.2,35.5 A1.8,1.8 0 1,1 25.8,35.5 A1.8,1.8 0 1,1 22.2,35.5 Z" />
+</vector>

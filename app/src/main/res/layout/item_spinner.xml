@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Item selecionado exibido no Spinner de categoria. -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:paddingStart="@dimen/espaco_p"
+    android:paddingTop="@dimen/espaco_m"
+    android:paddingEnd="@dimen/espaco_p"
+    android:paddingBottom="@dimen/espaco_m"
+    android:textColor="@color/arcade_texto"
+    android:textSize="@dimen/texto_corpo" />

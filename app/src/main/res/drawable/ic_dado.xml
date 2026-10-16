@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dado neon: destaque do resultado do sorteio. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <path
+        android:pathData="M13,9 L35,9 Q39,9 39,13 L39,35 Q39,39 35,39 L13,39 Q9,39 9,35 L9,13 Q9,9 13,9 Z"
+        android:strokeWidth="4.5"
+        android:strokeColor="@color/brilho_amarelo"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M13,9 L35,9 Q39,9 39,13 L39,35 Q39,39 35,39 L13,39 Q9,39 9,35 L9,13 Q9,9 13,9 Z"
+        android:strokeWidth="1.8"
+        android:strokeColor="@color/neon_amarelo"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="@color/neon_amarelo"
+        android:pathData="M14.8,16 A2.2,2.2 0 1,1 19.2,16 A2.2,2.2 0 1,1 14.8,16 Z M28.8,16 A2.2,2.2 0 1,1 33.2,16 A2.2,2.2 0 1,1 28.8,16 Z M21.8,24 A2.2,2.2 0 1,1 26.2,24 A2.2,2.2 0 1,1 21.8,24 Z M14.8,32 A2.2,2.2 0 1,1 19.2,32 A2.2,2.2 0 1,1 14.8,32 Z M28.8,32 A2.2,2.2 0 1,1 33.2,32 A2.2,2.2 0 1,1 28.8,32 Z" />
+</vector>

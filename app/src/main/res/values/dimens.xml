@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Espaçamentos -->
+    <dimen name="espaco_xs">4dp</dimen>
+    <dimen name="espaco_p">8dp</dimen>
+    <dimen name="espaco_m">12dp</dimen>
+    <dimen name="espaco_g">16dp</dimen>
+    <dimen name="espaco_gg">24dp</dimen>
+    <dimen name="margem_tela">20dp</dimen>
+
+    <!-- Formas -->
+    <dimen name="raio_painel">18dp</dimen>
+    <dimen name="raio_botao">12dp</dimen>
+    <dimen name="raio_tile">8dp</dimen>
+    <dimen name="borda_painel">1.5dp</dimen>
+    <dimen name="borda_neon">2dp</dimen>
+    <dimen name="altura_linha_neon">3dp</dimen>
+
+    <!-- Imagens e alvos de toque -->
+    <dimen name="icone_logo">104dp</dimen>
+    <dimen name="icone_cabecalho">40dp</dimen>
+    <dimen name="icone_painel">64dp</dimen>
+    <dimen name="botao_jogada">88dp</dimen>
+    <dimen name="imagem_duelo">84dp</dimen>
+    <dimen name="tile_digito">40dp</dimen>
+    <dimen name="slot_cofre">48dp</dimen>
+    <dimen name="legenda_cor">16dp</dimen>
+    <dimen name="icone_dado">44dp</dimen>
+    <dimen name="alvo_toque">48dp</dimen>
+
+    <!-- Textos -->
+    <dimen name="texto_logo">34sp</dimen>
+    <dimen name="texto_titulo">26sp</dimen>
+    <dimen name="texto_secao">19sp</dimen>
+    <dimen name="texto_corpo">15sp</dimen>
+    <dimen name="texto_legenda">13sp</dimen>
+    <dimen name="texto_overline">12sp</dimen>
+    <dimen name="texto_placar">40sp</dimen>
+    <dimen name="texto_resultado">24sp</dimen>
+    <dimen name="texto_digito">20sp</dimen>
+    <dimen name="texto_slot">26sp</dimen>
+    <dimen name="texto_sorteado">22sp</dimen>
+
+    <!-- Animações -->
+    <dimen name="deslocamento_animacao">120dp</dimen>
+    <dimen name="deslocamento_curto">24dp</dimen>
+</resources>

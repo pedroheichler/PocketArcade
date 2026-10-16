@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tremida horizontal usada para sinalizar entrada inválida ou derrota.
+     O cycleInterpolator oscila entre -1 e 1, então a view vai de -3% a +3% e volta ao lugar. -->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="@integer/duracao_media"
+    android:fromXDelta="0%"
+    android:interpolator="@anim/ciclo_tremida"
+    android:toXDelta="3%" />

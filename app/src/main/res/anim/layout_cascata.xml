@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Aplica painel_entrada em cascata a cada filho do LinearLayout da Central. -->
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    android:animation="@anim/painel_entrada"
+    android:animationOrder="normal"
+    android:delay="20%" />

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 4 · Arena de Pedra, Papel e Tesoura (melhor de três) -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rolagemArena"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tela"
+    android:fillViewport="true"
+    tools:context=".ArenaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_tela">
+
+        <include
+            android:id="@+id/cabecalho"
+            layout="@layout/cabecalho_desafio" />
+
+        <!-- Placar -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPlacar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            app:strokeColor="@color/neon_magenta">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/espaco_g">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textoNomeJogador"
+                            style="@style/Texto.Arcade.Overline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            tools:text="Jogador" />
+
+                        <TextView
+                            android:id="@+id/textoPontosJogador"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:textColor="@color/neon_ciano"
+                            android:textSize="@dimen/texto_placar"
+                            android:textStyle="bold"
+                            tools:text="0" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Texto.Arcade.Secao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/arena_placar_separador"
+                        android:textColor="@color/arcade_texto_suave" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Texto.Arcade.Overline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/arena_dispositivo"
+                            android:textColor="@color/neon_magenta" />
+
+                        <TextView
+                            android:id="@+id/textoPontosDispositivo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:textColor="@color/neon_magenta"
+                            android:textSize="@dimen/texto_placar"
+                            android:textStyle="bold"
+                            tools:text="0" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textoRodada"
+                    style="@style/Texto.Arcade.Legenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:gravity="center"
+                    tools:text="Rodada 1 · melhor de três" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Duelo: as duas escolhas e o resultado da rodada -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardDuelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/espaco_g">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imagemEscolhaJogador"
+                            android:layout_width="@dimen/imagem_duelo"
+                            android:layout_height="@dimen/imagem_duelo"
+                            android:contentDescription="@string/cd_escolha_vazia"
+                            android:src="@drawable/ic_duvida" />
+
+                        <TextView
+                            android:id="@+id/textoEscolhaJogador"
+                            style="@style/Texto.Arcade.Legenda"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/arena_voce" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:text="@string/arena_vs"
+                        android:textColor="@color/neon_amarelo"
+                        android:textSize="@dimen/texto_resultado"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imagemEscolhaDispositivo"
+                            android:layout_width="@dimen/imagem_duelo"
+                            android:layout_height="@dimen/imagem_duelo"
+                            android:contentDescription="@string/cd_escolha_vazia"
+                            android:src="@drawable/ic_duvida" />
+
+                        <TextView
+                            android:id="@+id/textoEscolhaDispositivo"
+                            style="@style/Texto.Arcade.Legenda"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/arena_dispositivo" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textoResultado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_g"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="@string/arena_aguardando"
+                    android:textColor="@color/arcade_texto"
+                    android:textSize="@dimen/texto_resultado" />
+
+                <TextView
+                    android:id="@+id/textoDetalhe"
+                    style="@style/Texto.Arcade.Corpo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/arena_aguardando_detalhe" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Resultado final: aparece quando alguém chega a duas vitórias -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardFinal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/arcade_superficie_alta"
+            app:strokeColor="@color/neon_amarelo"
+            app:strokeWidth="@dimen/borda_neon"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/espaco_g">
+
+                <TextView
+                    android:id="@+id/textoFinalTitulo"
+                    style="@style/Texto.Arcade.Titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    tools:text="Você venceu a partida!" />
+
+                <TextView
+                    android:id="@+id/textoFinalPlacar"
+                    style="@style/Texto.Arcade.Corpo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_xs"
+                    android:fontFamily="monospace"
+                    tools:text="Placar final: 2 × 1" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            style="@style/Texto.Arcade.Secao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_gg"
+            android:text="@string/arena_subtitulo" />
+
+        <!-- Três botões com imagem -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/botaoPedra"
+                    android:layout_width="@dimen/botao_jogada"
+                    android:layout_height="@dimen/botao_jogada"
+                    android:background="@drawable/bg_botao_jogada"
+                    android:contentDescription="@string/cd_jogar_pedra"
+                    android:padding="@dimen/espaco_m"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_pedra" />
+
+                <TextView
+                    style="@style/Texto.Arcade.Corpo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/arena_pedra"
+                    android:textColor="@color/arcade_texto" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/botaoPapel"
+                    android:layout_width="@dimen/botao_jogada"
+                    android:layout_height="@dimen/botao_jogada"
+                    android:background="@drawable/bg_botao_jogada"
+                    android:contentDescription="@string/cd_jogar_papel"
+                    android:padding="@dimen/espaco_m"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_papel" />
+
+                <TextView
+                    style="@style/Texto.Arcade.Corpo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/arena_papel"
+                    android:textColor="@color/arcade_texto" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/botaoTesoura"
+                    android:layout_width="@dimen/botao_jogada"
+                    android:layout_height="@dimen/botao_jogada"
+                    android:background="@drawable/bg_botao_jogada"
+                    android:contentDescription="@string/cd_jogar_tesoura"
+                    android:padding="@dimen/espaco_m"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_tesoura" />
+
+                <TextView
+                    style="@style/Texto.Arcade.Corpo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/arena_tesoura"
+                    android:textColor="@color/arcade_texto" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/Texto.Arcade.Legenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:gravity="center"
+            android:text="@string/arena_regra" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoNovaPartida"
+            style="@style/Widget.Arcade.BotaoContorno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:text="@string/acao_nova_partida" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

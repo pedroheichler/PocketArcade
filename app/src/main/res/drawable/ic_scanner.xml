@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Envelope com lupa: ícone do Scanner de Mensagens. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <path
+        android:pathData="M24,31 L5,31 L5,11 L33,11 L33,22 M5,11 L19,22.5 L33,11 M25.5,32 A7.5,7.5 0 1,1 40.5,32 A7.5,7.5 0 1,1 25.5,32 Z M38.5,37.5 L44,43"
+        android:strokeWidth="4.5"
+        android:strokeColor="@color/brilho_ciano"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M24,31 L5,31 L5,11 L33,11 L33,22 M5,11 L19,22.5 L33,11"
+        android:strokeWidth="1.8"
+        android:strokeColor="@color/neon_ciano"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M25.5,32 A7.5,7.5 0 1,1 40.5,32 A7.5,7.5 0 1,1 25.5,32 Z"
+        android:strokeWidth="1.8"
+        android:strokeColor="@color/arcade_texto" />
+    <path
+        android:pathData="M38.5,37.5 L44,43"
+        android:strokeWidth="2.6"
+        android:strokeColor="@color/arcade_texto"
+        android:strokeLineCap="round" />
+</vector>

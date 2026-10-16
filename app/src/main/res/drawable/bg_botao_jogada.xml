@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Botão de jogada da Arena: borda neon com efeito de toque. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/brilho_toque">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/raio_painel" />
+            <solid android:color="@color/arcade_superficie_alta" />
+            <stroke
+                android:width="@dimen/borda_neon"
+                android:color="@color/arcade_borda" />
+        </shape>
+    </item>
+</ripple>

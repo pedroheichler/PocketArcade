@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.PocketArcade" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/neon_ciano</item>
+        <item name="colorOnPrimary">@color/texto_sobre_neon</item>
+        <item name="colorPrimaryContainer">@color/arcade_superficie_alta</item>
+        <item name="colorOnPrimaryContainer">@color/arcade_texto</item>
+        <item name="colorSecondary">@color/neon_magenta</item>
+        <item name="colorOnSecondary">@color/texto_sobre_neon</item>
+        <item name="colorTertiary">@color/neon_laranja</item>
+        <item name="colorError">@color/erro</item>
+        <item name="android:colorBackground">@color/arcade_fundo</item>
+        <item name="colorSurface">@color/arcade_superficie</item>
+        <item name="colorOnSurface">@color/arcade_texto</item>
+        <item name="colorOnSurfaceVariant">@color/arcade_texto_suave</item>
+        <item name="colorOutline">@color/arcade_borda</item>
+        <item name="android:windowBackground">@color/arcade_fundo</item>
+        <item name="materialButtonStyle">@style/Widget.Arcade.Botao</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Arcade.BotaoContorno</item>
+        <item name="materialCardViewStyle">@style/Widget.Arcade.Painel</item>
+        <item name="textInputStyle">@style/Widget.Arcade.Campo</item>
+    </style>
+
+    <!-- Botões -->
+    <style name="Widget.Arcade.Botao" parent="Widget.Material3.Button">
+        <item name="cornerRadius">@dimen/raio_botao</item>
+        <item name="android:minHeight">@dimen/alvo_toque</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="Widget.Arcade.BotaoContorno" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">@dimen/raio_botao</item>
+        <item name="android:minHeight">@dimen/alvo_toque</item>
+        <item name="strokeColor">@color/neon_ciano</item>
+        <item name="android:textColor">@color/neon_ciano</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.Arcade.BotaoTexto" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">@dimen/alvo_toque</item>
+        <item name="android:textColor">@color/neon_magenta</item>
+        <item name="iconTint">@color/neon_magenta</item>
+    </style>
+
+    <!-- Painéis -->
+    <style name="Widget.Arcade.Painel" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/arcade_superficie</item>
+        <item name="cardCornerRadius">@dimen/raio_painel</item>
+        <item name="strokeColor">@color/arcade_borda</item>
+        <item name="strokeWidth">@dimen/borda_painel</item>
+    </style>
+
+    <!-- Campos de texto -->
+    <style name="Widget.Arcade.Campo" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/borda_campo</item>
+        <item name="hintTextColor">@color/neon_ciano</item>
+        <item name="boxCornerRadiusTopStart">@dimen/raio_botao</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/raio_botao</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/raio_botao</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/raio_botao</item>
+    </style>
+
+    <!-- Tipografia -->
+    <style name="Texto.Arcade.Overline" parent="">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">@dimen/texto_overline</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:textColor">@color/neon_ciano</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Texto.Arcade.Titulo" parent="">
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:textSize">@dimen/texto_titulo</item>
+        <item name="android:textColor">@color/arcade_texto</item>
+    </style>
+
+    <style name="Texto.Arcade.Secao" parent="">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">@dimen/texto_secao</item>
+        <item name="android:textColor">@color/arcade_texto</item>
+    </style>
+
+    <style name="Texto.Arcade.Corpo" parent="">
+        <item name="android:textSize">@dimen/texto_corpo</item>
+        <item name="android:textColor">@color/arcade_texto_suave</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="Texto.Arcade.Legenda" parent="">
+        <item name="android:textSize">@dimen/texto_legenda</item>
+        <item name="android:textColor">@color/arcade_texto_suave</item>
+    </style>
+
+    <style name="Texto.Arcade.Tabela" parent="">
+        <item name="android:textSize">@dimen/texto_corpo</item>
+        <item name="android:textColor">@color/arcade_texto</item>
+        <item name="android:paddingTop">@dimen/espaco_p</item>
+        <item name="android:paddingBottom">@dimen/espaco_p</item>
+    </style>
+
+    <style name="Texto.Arcade.Digito" parent="">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">@dimen/texto_digito</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/arcade_texto</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

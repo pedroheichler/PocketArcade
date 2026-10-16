@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cabeçalho reutilizado (include) pelas Telas 3 a 6:
+     seta = finish() de volta à Central; Encerrar = volta à Tela 1 com flags. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/botaoVoltar"
+        android:layout_width="@dimen/alvo_toque"
+        android:layout_height="@dimen/alvo_toque"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/cd_voltar"
+        android:src="@drawable/ic_voltar" />
+
+    <TextView
+        android:id="@+id/textoTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/espaco_xs"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:fontFamily="monospace"
+        android:maxLines="2"
+        android:textColor="@color/arcade_texto"
+        android:textSize="@dimen/texto_corpo"
+        android:textStyle="bold"
+        tools:text="Scanner de Mensagens" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/botaoEncerrar"
+        style="@style/Widget.Arcade.BotaoTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/acao_encerrar"
+        app:icon="@drawable/ic_sair" />
+</LinearLayout>

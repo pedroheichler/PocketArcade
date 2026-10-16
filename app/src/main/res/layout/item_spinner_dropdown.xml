@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Opção da lista suspensa do Spinner de categoria. -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/alvo_toque"
+    android:gravity="center_vertical"
+    android:paddingStart="@dimen/espaco_g"
+    android:paddingEnd="@dimen/espaco_g"
+    android:textColor="@color/arcade_texto"
+    android:textSize="@dimen/texto_corpo" />

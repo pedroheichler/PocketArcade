@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Borda dos campos de texto: neon quando focado, azul visível em repouso. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/neon_ciano" android:state_focused="true" />
+    <item android:color="@color/neon_ciano" android:state_hovered="true" />
+    <item android:color="@color/arcade_borda" android:state_enabled="false" />
+    <item android:color="@color/arcade_borda_campo" />
+</selector>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pocket Arcade</string>
+
+    <!-- Nomes dos módulos (também enviados como "último módulo usado") -->
+    <string name="modulo_central">Central de Desafios</string>
+    <string name="modulo_scanner">Scanner de Mensagens</string>
+    <string name="modulo_arena">Arena de Pedra, Papel e Tesoura</string>
+    <string name="modulo_cofre">Cofre do Código Secreto</string>
+    <string name="modulo_randomizador">Randomizador de Palavras</string>
+
+    <!-- Comuns -->
+    <string name="jogador_padrao">Jogador</string>
+    <string name="cd_voltar">Voltar para a Central de Desafios</string>
+    <string name="acao_encerrar">Encerrar</string>
+    <string name="acao_encerrar_sessao">Encerrar sessão</string>
+    <string name="acao_nova_partida">Nova partida</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+
+    <!-- Tela 1 · Apresentação -->
+    <string name="apresentacao_overline">Fliperama de bolso · APP05</string>
+    <string name="apresentacao_slogan">Quatro desafios, um jogador. Aperte start!</string>
+    <string name="cd_logo">Logotipo do Pocket Arcade: um controle de videogame em neon</string>
+    <string name="integrante_titulo">Integrante</string>
+    <string name="rotulo_nome">Nome</string>
+    <string name="rotulo_matricula">Matrícula</string>
+    <string name="rotulo_curso">Curso</string>
+    <!-- TROQUE pelos seus dados antes de entregar -->
+    <string name="integrante1_nome">Seu Nome Completo</string>
+    <string name="integrante1_matricula">000000000</string>
+    <string name="integrante1_curso">Seu Curso</string>
+    <string name="modalidade">Trabalho individual</string>
+    <string name="disciplina">Desenvolvimento de Aplicações para Dispositivos Móveis · Prof. Fernando Gonçalves Abadia</string>
+    <string name="apelido_rotulo">Seu apelido</string>
+    <string name="apelido_placeholder">Digite seu apelido</string>
+    <string name="apelido_ajuda">Mínimo de 3 caracteres</string>
+    <string name="acao_entrar">Entrar no Pocket Arcade</string>
+    <string name="retorno_ultimo_modulo">Sessão encerrada. Último módulo usado: %1$s</string>
+    <string name="erro_apelido_vazio">Digite um apelido para entrar.</string>
+    <string name="erro_apelido_curto">O apelido precisa de pelo menos %1$d caracteres.</string>
+
+    <!-- Tela 2 · Central de Desafios -->
+    <string name="central_overline">Central de desafios</string>
+    <string name="central_saudacao">Olá, %1$s!</string>
+    <string name="central_subtitulo">Escolha um desafio. Cada módulo testa uma habilidade diferente: leitura, sorte, lógica e criatividade.</string>
+    <string name="central_ultimo_nenhum">Nenhum desafio aberto nesta sessão.</string>
+    <string name="central_ultimo">Último desafio aberto: %1$s</string>
+    <string name="erro_apelido_ausente">Apelido inválido. Identifique-se novamente.</string>
+
+    <string name="painel_scanner_titulo">Scanner</string>
+    <string name="painel_scanner_tag">Texto · validação</string>
+    <string name="painel_scanner_descricao">Analise uma mensagem em cinco medidas e descubra se ela é um palíndromo.</string>
+    <string name="painel_scanner_botao">Abrir Scanner</string>
+    <string name="cd_scanner">Envelope com uma lupa</string>
+
+    <string name="painel_arena_titulo">Arena</string>
+    <string name="painel_arena_tag">Sorte · melhor de três</string>
+    <string name="painel_arena_descricao">Pedra, papel e tesoura contra o dispositivo. Duas vitórias levam a partida.</string>
+    <string name="painel_arena_botao">Abrir Arena</string>
+    <string name="cd_arena">Tesoura em neon magenta</string>
+
+    <string name="painel_cofre_titulo">Código Secreto</string>
+    <string name="painel_cofre_tag">Lógica · 8 tentativas</string>
+    <string name="painel_cofre_descricao">Descubra os quatro dígitos diferentes do cofre seguindo as pistas coloridas.</string>
+    <string name="painel_cofre_botao">Abrir Cofre</string>
+    <string name="cd_cofre">Cofre com disco de segredo</string>
+
+    <string name="painel_rand_titulo">Randomizador</string>
+    <string name="painel_rand_tag">Listas · sorteio</string>
+    <string name="painel_rand_descricao">Cadastre palavras por categoria e deixe o acaso escolher uma delas.</string>
+    <string name="painel_rand_botao">Abrir Randomizador</string>
+    <string name="cd_randomizador">Setas embaralhadas</string>
+
+    <string name="central_regras_titulo">Regras rápidas</string>
+    <string name="central_regras_scanner">Scanner: digite pelo menos 3 caracteres e toque em Analisar.</string>
+    <string name="central_regras_arena">Arena: empates não pontuam; quem fizer 2 pontos primeiro vence.</string>
+    <string name="central_regras_cofre">Cofre: verde é posição certa, amarelo é posição errada e cinza não existe no código.</string>
+    <string name="central_regras_rand">Randomizador: toque e segure um item para excluí-lo.</string>
+    <string name="central_navegacao">A seta de cada desafio volta para esta Central. Encerrar sessão leva de volta à tela inicial.</string>
+    <string name="creditos">Créditos: ícones vetoriais desenhados para este projeto; efeitos sonoros sintetizados pelo script tools/gerar_sons.py.</string>
+
+    <!-- Tela 3 · Scanner de Mensagens -->
+    <string name="scanner_subtitulo">%1$s, digite uma mensagem. O scanner mede cinco características do texto.</string>
+    <string name="scanner_campo">Mensagem</string>
+    <string name="scanner_placeholder">Ex.: A sacada da casa</string>
+    <string name="scanner_ajuda">Pelo menos 3 caracteres, sem contar espaços</string>
+    <string name="acao_analisar">Analisar</string>
+    <string name="acao_limpar">Limpar</string>
+    <string name="scanner_cabecalho_medida">Medida</string>
+    <string name="scanner_cabecalho_resultado">Resultado</string>
+    <string name="scanner_caracteres">Caracteres sem espaços</string>
+    <string name="scanner_palavras">Palavras</string>
+    <string name="scanner_vogais">Vogais</string>
+    <string name="scanner_invertido">Texto invertido</string>
+    <string name="scanner_palindromo">Palíndromo</string>
+    <string name="scanner_exemplos">Experimente “Ana”, “A sacada da casa” ou “Roma me tem amor”. O teste de palíndromo ignora espaços, maiúsculas, acentos e pontuação.</string>
+    <string name="erro_mensagem_vazia">Digite uma mensagem para analisar.</string>
+    <string name="erro_mensagem_curta">A mensagem precisa de pelo menos %1$d caracteres (espaços não contam).</string>
+
+    <!-- Tela 4 · Arena -->
+    <string name="arena_subtitulo">Escolha sua jogada</string>
+    <string name="arena_dispositivo">Dispositivo</string>
+    <string name="arena_vs">VS</string>
+    <string name="arena_rodada">Rodada %1$d · melhor de três</string>
+    <string name="arena_rodada_fim">Partida encerrada após %1$d rodadas</string>
+    <string name="arena_pedra">Pedra</string>
+    <string name="arena_papel">Papel</string>
+    <string name="arena_tesoura">Tesoura</string>
+    <string name="cd_jogar_pedra">Jogar pedra</string>
+    <string name="cd_jogar_papel">Jogar papel</string>
+    <string name="cd_jogar_tesoura">Jogar tesoura</string>
+    <string name="cd_escolha_jogador">Sua jogada: %1$s</string>
+    <string name="cd_escolha_dispositivo">Jogada do dispositivo: %1$s</string>
+    <string name="cd_escolha_vazia">Jogada ainda não escolhida</string>
+    <string name="arena_aguardando">Faça sua jogada!</string>
+    <string name="arena_aguardando_detalhe">O dispositivo sorteia a dele no mesmo instante.</string>
+    <string name="arena_vitoria">Vitória!</string>
+    <string name="arena_derrota">Derrota!</string>
+    <string name="arena_empate">Empate!</string>
+    <string name="arena_pedra_vence">Pedra quebra tesoura.</string>
+    <string name="arena_tesoura_vence">Tesoura corta papel.</string>
+    <string name="arena_papel_vence">Papel embrulha pedra.</string>
+    <string name="arena_empate_detalhe">Os dois escolheram %1$s. Ninguém pontua.</string>
+    <string name="arena_fim_vitoria">Você venceu a partida, %1$s!</string>
+    <string name="arena_fim_derrota">O dispositivo venceu a partida.</string>
+    <string name="arena_placar_final">Placar final: %1$d × %2$d</string>
+    <string name="arena_regra">Empates não somam pontos. Vence quem alcançar duas vitórias primeiro.</string>
+    <string name="arena_voce">Você</string>
+    <string name="arena_placar_separador">×</string>
+
+    <!-- Tela 5 · Cofre do Código Secreto -->
+    <string name="cofre_subtitulo">%1$s, o cofre esconde quatro dígitos diferentes. Você tem 8 tentativas.</string>
+    <string name="cofre_slot_oculto">•</string>
+    <string name="cd_cofre_oculto">Código escondido</string>
+    <string name="cd_cofre_revelado">Código revelado: %1$s</string>
+    <string name="cofre_tentativas">Tentativas restantes: %1$d de %2$d</string>
+    <string name="cofre_campo">Palpite</string>
+    <string name="cofre_placeholder">Digite quatro números diferentes</string>
+    <string name="acao_tentar">Tentar</string>
+    <string name="cofre_historico">Histórico das tentativas</string>
+    <string name="cofre_historico_vazio">Nenhuma tentativa ainda. Seus palpites aparecem aqui.</string>
+    <string name="cofre_numero_tentativa">%1$dª</string>
+    <string name="cofre_resumo">🟩%1$d  🟨%2$d  ⬜%3$d</string>
+    <string name="cd_tentativa">Tentativa %1$d, palpite %2$s: %3$d na posição certa, %4$d na posição errada, %5$d ausentes</string>
+    <string name="cofre_legenda_titulo">Como ler as pistas</string>
+    <string name="cofre_legenda_verde">Verde: dígito certo na posição certa.</string>
+    <string name="cofre_legenda_amarelo">Amarelo: o dígito existe, mas em outra posição.</string>
+    <string name="cofre_legenda_cinza">Cinza: o dígito não existe no código.</string>
+    <string name="cofre_vitoria_titulo">Cofre aberto!</string>
+    <string name="cofre_vitoria_mensagem">Parabéns, %1$s! Você descobriu o código %2$s.</string>
+    <string name="cofre_derrota_titulo">Cofre bloqueado</string>
+    <string name="cofre_derrota_mensagem">As tentativas acabaram. O código era %1$s.</string>
+    <string name="cofre_estatisticas">Tentativas usadas: %1$d de %2$d · Tempo: %3$s</string>
+    <string name="tempo_segundos">%1$d s</string>
+    <string name="tempo_minutos">%1$d min %2$02d s</string>
+    <string name="erro_palpite_vazio">Digite um palpite.</string>
+    <string name="erro_palpite_numerico">Use apenas números.</string>
+    <string name="erro_palpite_tamanho">O palpite precisa ter exatamente %1$d números.</string>
+    <string name="erro_palpite_repetido">Os dígitos não podem se repetir.</string>
+
+    <!-- Tela 6 · Randomizador -->
+    <string name="rand_subtitulo">%1$s, cadastre itens e sorteie dentro da categoria escolhida.</string>
+    <string name="rand_campo">Palavra ou valor</string>
+    <string name="rand_placeholder">Ex.: Interestelar</string>
+    <string name="rand_categoria">Categoria</string>
+    <string name="acao_adicionar">Adicionar</string>
+    <string name="acao_sortear">Sortear</string>
+    <string name="rand_ver_grade">Grade</string>
+    <string name="rand_ver_lista">Lista</string>
+    <string name="rand_contagem_zero">Nenhum item em %1$s</string>
+    <plurals name="rand_contagem">
+        <item quantity="one">%1$d item em %2$s</item>
+        <item quantity="many">%1$d itens em %2$s</item>
+        <item quantity="other">%1$d itens em %2$s</item>
+    </plurals>
+    <string name="rand_lista_vazia">Lista vazia. Adicione itens para sortear.</string>
+    <string name="rand_resultado_inicial">Toque em Sortear</string>
+    <string name="rand_resultado_dica">Só na categoria selecionada</string>
+    <string name="rand_sorteado_em">Sorteado em %1$s</string>
+    <string name="rand_dica_excluir">Toque e segure um item para excluí-lo.</string>
+    <string name="rand_removido">“%1$s” removido</string>
+    <string name="erro_valor_vazio">Digite uma palavra antes de adicionar.</string>
+    <string name="erro_valor_repetido">“%1$s” já está em %2$s.</string>
+    <string name="erro_categoria_vazia">Nenhum item em %1$s. Adicione um antes de sortear.</string>
+    <string name="cd_dado">Dado do sorteio</string>
+    <string name="cd_item">%1$s, categoria %2$s. Toque e segure para excluir.</string>
+</resources>

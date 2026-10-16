@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Folha de papel neon: jogada "papel". -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <path
+        android:pathData="M13,6 L29,6 L37,14 L37,42 L13,42 Z"
+        android:strokeWidth="4.5"
+        android:strokeColor="@color/brilho_ciano"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M13,6 L29,6 L37,14 L37,42 L13,42 Z M29,6 L29,14 L37,14"
+        android:strokeWidth="1.8"
+        android:strokeColor="@color/neon_ciano"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M18,21 L32,21 M18,27 L32,27 M18,33 L27,33"
+        android:strokeWidth="1.6"
+        android:strokeColor="@color/arcade_texto_suave"
+        android:strokeLineCap="round" />
+</vector>

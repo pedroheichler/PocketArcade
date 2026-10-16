@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 1 · Apresentação. Os elementos são organizados por um ConstraintLayout;
+     a rolagem externa garante que tudo caiba em telas pequenas e com o teclado aberto. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rolagemApresentacao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tela"
+    android:fillViewport="true"
+    tools:context=".ApresentacaoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutApresentacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margem_tela">
+
+        <ImageView
+            android:id="@+id/imagemLogo"
+            android:layout_width="@dimen/icone_logo"
+            android:layout_height="@dimen/icone_logo"
+            android:layout_marginTop="@dimen/espaco_gg"
+            android:contentDescription="@string/cd_logo"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textoOverline"
+            style="@style/Texto.Arcade.Overline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:text="@string/apresentacao_overline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imagemLogo" />
+
+        <TextView
+            android:id="@+id/textoTitulo"
+            style="@style/Texto.Arcade.Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/app_name"
+            android:textSize="@dimen/texto_logo"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoOverline" />
+
+        <TextView
+            android:id="@+id/textoSlogan"
+            style="@style/Texto.Arcade.Corpo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_xs"
+            android:gravity="center"
+            android:text="@string/apresentacao_slogan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoTitulo" />
+
+        <View
+            android:id="@+id/linhaNeon"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/altura_linha_neon"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:background="@drawable/linha_neon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoSlogan" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardIntegrante"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linhaNeon">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/espaco_g">
+
+                <TextView
+                    android:id="@+id/textoIntegranteTitulo"
+                    style="@style/Texto.Arcade.Overline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/espaco_p"
+                    android:text="@string/integrante_titulo"
+                    android:textColor="@color/neon_magenta" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Texto.Arcade.Legenda"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rotulo_nome" />
+
+                    <TextView
+                        android:id="@+id/textoNome"
+                        style="@style/Texto.Arcade.Corpo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/integrante1_nome"
+                        android:textColor="@color/arcade_texto"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_xs"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Texto.Arcade.Legenda"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rotulo_matricula" />
+
+                    <TextView
+                        android:id="@+id/textoMatricula"
+                        style="@style/Texto.Arcade.Corpo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="monospace"
+                        android:text="@string/integrante1_matricula"
+                        android:textColor="@color/arcade_texto" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_xs"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/Texto.Arcade.Legenda"
+                        android:layout_width="96dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rotulo_curso" />
+
+                    <TextView
+                        android:id="@+id/textoCurso"
+                        style="@style/Texto.Arcade.Corpo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/integrante1_curso"
+                        android:textColor="@color/arcade_texto" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textoDisciplina"
+                    style="@style/Texto.Arcade.Legenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_m"
+                    android:text="@string/disciplina" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/textoRetorno"
+            style="@style/Texto.Arcade.Corpo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:background="@drawable/bg_banner"
+            android:padding="@dimen/espaco_m"
+            android:textColor="@color/arcade_texto"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardIntegrante"
+            tools:text="Sessão encerrada. Último módulo usado: Arena"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutApelido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:hint="@string/apelido_rotulo"
+            app:counterEnabled="true"
+            app:counterMaxLength="@integer/max_apelido"
+            app:helperText="@string/apelido_ajuda"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textoRetorno"
+            app:placeholderText="@string/apelido_placeholder">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoApelido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionGo"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName|textCapWords"
+                android:maxLength="@integer/max_apelido"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoEntrar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:paddingTop="@dimen/espaco_g"
+            android:paddingBottom="@dimen/espaco_g"
+            android:text="@string/acao_entrar"
+            android:textColor="@color/texto_sobre_neon"
+            android:textSize="@dimen/texto_corpo"
+            app:backgroundTint="@color/neon_laranja"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutApelido" />
+
+        <TextView
+            android:id="@+id/textoModalidade"
+            style="@style/Texto.Arcade.Overline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_gg"
+            android:text="@string/modalidade"
+            android:textColor="@color/arcade_texto_suave"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botaoEntrar"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

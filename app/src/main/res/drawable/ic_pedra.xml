@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pedra neon: jogada "pedra". -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <path
+        android:pathData="M9,31 L12,19 L21,12 L32,13 L39,21 L40,31 L33,38 L16,38 Z"
+        android:strokeWidth="4.5"
+        android:strokeColor="@color/brilho_laranja"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M9,31 L12,19 L21,12 L32,13 L39,21 L40,31 L33,38 L16,38 Z"
+        android:strokeWidth="1.8"
+        android:strokeColor="@color/neon_laranja"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M21,12 L24,21 L32,24 M24,21 L19,28 M33,31 L28,34"
+        android:strokeWidth="1.4"
+        android:strokeColor="@color/arcade_texto_suave"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

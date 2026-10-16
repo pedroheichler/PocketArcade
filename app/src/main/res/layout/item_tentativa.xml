@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uma linha do histórico do Cofre: número, quatro dígitos coloridos e o resumo das pistas. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/espaco_xs"
+    android:paddingBottom="@dimen/espaco_xs">
+
+    <TextView
+        android:id="@+id/textoNumero"
+        style="@style/Texto.Arcade.Legenda"
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        tools:text="1ª" />
+
+    <TextView
+        android:id="@+id/digito1"
+        style="@style/Texto.Arcade.Digito"
+        android:layout_width="@dimen/tile_digito"
+        android:layout_height="@dimen/tile_digito"
+        android:layout_marginEnd="@dimen/espaco_xs"
+        android:background="@drawable/bg_tile"
+        android:backgroundTint="@color/pista_cinza"
+        tools:text="4" />
+
+    <TextView
+        android:id="@+id/digito2"
+        style="@style/Texto.Arcade.Digito"
+        android:layout_width="@dimen/tile_digito"
+        android:layout_height="@dimen/tile_digito"
+        android:layout_marginEnd="@dimen/espaco_xs"
+        android:background="@drawable/bg_tile"
+        android:backgroundTint="@color/pista_cinza"
+        tools:text="2" />
+
+    <TextView
+        android:id="@+id/digito3"
+        style="@style/Texto.Arcade.Digito"
+        android:layout_width="@dimen/tile_digito"
+        android:layout_height="@dimen/tile_digito"
+        android:layout_marginEnd="@dimen/espaco_xs"
+        android:background="@drawable/bg_tile"
+        android:backgroundTint="@color/pista_cinza"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/digito4"
+        style="@style/Texto.Arcade.Digito"
+        android:layout_width="@dimen/tile_digito"
+        android:layout_height="@dimen/tile_digito"
+        android:background="@drawable/bg_tile"
+        android:backgroundTint="@color/pista_cinza"
+        tools:text="9" />
+
+    <TextView
+        android:id="@+id/textoResumo"
+        style="@style/Texto.Arcade.Legenda"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/espaco_p"
+        android:layout_weight="1"
+        android:gravity="end"
+        tools:text="🟩2  🟨1  ⬜1" />
+</LinearLayout>

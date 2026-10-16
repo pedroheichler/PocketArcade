@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Base dos quadradinhos de dígito; a cor da pista é aplicada por backgroundTint. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/raio_tile" />
+    <solid android:color="@android:color/white" />
+</shape>

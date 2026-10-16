@@ -1,0 +1,10 @@
+* text=auto
+
+# Scripts do Gradle: Unix precisa de LF, Windows de CRLF
+gradlew text eol=lf
+*.bat text eol=crlf
+
+# Binários
+*.jar binary
+*.wav binary
+*.png binary

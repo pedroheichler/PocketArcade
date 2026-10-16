@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cofre com disco de segredo: ícone do Código Secreto. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <path
+        android:pathData="M10,8 L38,8 Q41,8 41,11 L41,37 Q41,40 38,40 L10,40 Q7,40 7,37 L7,11 Q7,8 10,8 Z"
+        android:strokeWidth="4.5"
+        android:strokeColor="@color/brilho_laranja"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M10,8 L38,8 Q41,8 41,11 L41,37 Q41,40 38,40 L10,40 Q7,40 7,37 L7,11 Q7,8 10,8 Z M7,14 L5,14 M7,34 L5,34 M12,40 L12,43 M36,40 L36,43"
+        android:strokeWidth="1.8"
+        android:strokeColor="@color/neon_laranja"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M16,24 A8,8 0 1,1 32,24 A8,8 0 1,1 16,24 Z M24,16 L24,19 M24,29 L24,32 M16,24 L19,24 M29,24 L32,24"
+        android:strokeWidth="1.6"
+        android:strokeColor="@color/arcade_texto"
+        android:strokeLineCap="round" />
+    <path
+        android:fillColor="@color/neon_laranja"
+        android:pathData="M22,24 A2,2 0 1,1 26,24 A2,2 0 1,1 22,24 Z" />
+</vector>

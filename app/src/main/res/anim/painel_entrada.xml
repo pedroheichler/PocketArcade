@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Entrada de cada painel da Central: sobe e aparece (fade + translate). -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="@integer/duracao_media"
+    android:interpolator="@android:anim/decelerate_interpolator">
+    <alpha
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" />
+    <translate
+        android:fromYDelta="40%"
+        android:toYDelta="0%" />
+</set>

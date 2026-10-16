@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 6 · Randomizador. Sem rolagem externa: o próprio RecyclerView rola
+     e ocupa o espaço que sobra entre o cadastro e os botões de sorteio. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/raizRandomizador"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tela"
+    android:orientation="vertical"
+    android:padding="@dimen/margem_tela"
+    tools:context=".RandomizadorActivity">
+
+    <include
+        android:id="@+id/cabecalho"
+        layout="@layout/cabecalho_desafio" />
+
+    <TextView
+        android:id="@+id/textoSubtitulo"
+        style="@style/Texto.Arcade.Legenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_xs"
+        tools:text="Jogador, cadastre itens e sorteie dentro da categoria escolhida." />
+
+    <!-- Cadastro: valor + categoria + Adicionar -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardCadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_m"
+        app:strokeColor="@color/neon_verde">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/espaco_m">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutValor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rand_campo"
+                app:placeholderText="@string/rand_placeholder">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoValor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapSentences"
+                    android:maxLength="@integer/max_valor"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/Texto.Arcade.Overline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_p"
+                android:labelFor="@id/spinnerCategoria"
+                android:text="@string/rand_categoria"
+                android:textColor="@color/neon_verde" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinnerCategoria"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/espaco_p"
+                    android:layout_weight="1"
+                    android:minHeight="@dimen/alvo_toque"
+                    android:popupBackground="@color/arcade_superficie_alta"
+                    android:spinnerMode="dropdown" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/botaoAdicionar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acao_adicionar"
+                    android:textColor="@color/texto_sobre_neon"
+                    app:backgroundTint="@color/neon_verde" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textoContagem"
+                style="@style/Texto.Arcade.Legenda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                tools:text="3 itens em Filmes" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Lista de itens cadastrados -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/espaco_m"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaItens"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/espaco_p"
+            android:scrollbars="vertical"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_palavra" />
+
+        <TextView
+            android:id="@+id/textoListaVazia"
+            style="@style/Texto.Arcade.Corpo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/rand_lista_vazia"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- Resultado do sorteio -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSorteio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_m"
+        app:cardBackgroundColor="@color/arcade_superficie_alta"
+        app:strokeColor="@color/neon_amarelo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/espaco_m">
+
+            <ImageView
+                android:id="@+id/imagemDado"
+                android:layout_width="@dimen/icone_dado"
+                android:layout_height="@dimen/icone_dado"
+                android:contentDescription="@string/cd_dado"
+                android:src="@drawable/ic_dado" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaco_m"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textoCategoriaSorteada"
+                    style="@style/Texto.Arcade.Overline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rand_resultado_dica"
+                    android:textAllCaps="false"
+                    android:textColor="@color/neon_amarelo" />
+
+                <TextView
+                    android:id="@+id/textoSorteado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif-black"
+                    android:maxLines="1"
+                    android:text="@string/rand_resultado_inicial"
+                    android:textColor="@color/arcade_texto"
+                    android:textSize="@dimen/texto_sorteado" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_m"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoSortear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/espaco_p"
+            android:layout_weight="1"
+            android:text="@string/acao_sortear"
+            android:textColor="@color/texto_sobre_neon"
+            app:backgroundTint="@color/neon_amarelo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/botaoAlternarLayout"
+            style="@style/Widget.Arcade.BotaoContorno"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/espaco_p"
+            android:layout_weight="1"
+            android:text="@string/rand_ver_grade"
+            app:icon="@drawable/ic_grade"
+            app:iconGravity="textStart"
+            app:iconTint="@color/neon_ciano" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textoDicaExcluir"
+        style="@style/Texto.Arcade.Legenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_p"
+        android:gravity="center"
+        android:text="@string/rand_dica_excluir" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base escura do fliperama -->
+    <color name="arcade_fundo">#0B1026</color>
+    <color name="arcade_fundo_topo">#151E4D</color>
+    <color name="arcade_superficie">#141B3A</color>
+    <color name="arcade_superficie_alta">#1D2652</color>
+    <color name="arcade_borda">#2C3A78</color>
+    <color name="arcade_borda_campo">#5A6BB5</color>
+    <color name="arcade_texto">#EEF2FF</color>
+    <color name="arcade_texto_suave">#A7B2D9</color>
+    <color name="texto_sobre_neon">#0B1026</color>
+
+    <!-- Neons de destaque (um por módulo) -->
+    <color name="neon_ciano">#22E4FF</color>
+    <color name="neon_magenta">#FF3DCB</color>
+    <color name="neon_laranja">#FF8A1F</color>
+    <color name="neon_verde">#3CFF8F</color>
+    <color name="neon_amarelo">#FFD23F</color>
+    <color name="erro">#FF5C7A</color>
+
+    <!-- Brilho translúcido usado por baixo dos traços dos ícones -->
+    <color name="brilho_ciano">#5522E4FF</color>
+    <color name="brilho_magenta">#55FF3DCB</color>
+    <color name="brilho_laranja">#55FF8A1F</color>
+    <color name="brilho_verde">#553CFF8F</color>
+    <color name="brilho_amarelo">#55FFD23F</color>
+    <color name="brilho_toque">#3322E4FF</color>
+    <color name="banner_fundo">#33FF3DCB</color>
+
+    <!-- Pistas do Cofre (inspiradas no TERMO) -->
+    <color name="pista_verde">#1FA85A</color>
+    <color name="pista_amarelo">#D9A400</color>
+    <color name="pista_cinza">#56607F</color>
+</resources>

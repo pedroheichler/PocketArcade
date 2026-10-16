@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tela 3 · Scanner de Mensagens -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rolagemScanner"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tela"
+    android:fillViewport="true"
+    tools:context=".ScannerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margem_tela">
+
+        <include
+            android:id="@+id/cabecalho"
+            layout="@layout/cabecalho_desafio" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imagemScanner"
+                android:layout_width="@dimen/icone_painel"
+                android:layout_height="@dimen/icone_painel"
+                android:contentDescription="@string/cd_scanner"
+                android:src="@drawable/ic_scanner" />
+
+            <TextView
+                android:id="@+id/textoSubtitulo"
+                style="@style/Texto.Arcade.Corpo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaco_g"
+                android:layout_weight="1"
+                tools:text="Jogador, digite uma mensagem. O scanner mede cinco características do texto." />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutMensagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:hint="@string/scanner_campo"
+            app:counterEnabled="true"
+            app:counterMaxLength="@integer/max_mensagem"
+            app:helperText="@string/scanner_ajuda"
+            app:placeholderText="@string/scanner_placeholder">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/campoMensagem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top|start"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLength="@integer/max_mensagem"
+                android:minLines="2" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoAnalisar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/espaco_p"
+                android:layout_weight="1"
+                android:text="@string/acao_analisar" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/botaoLimpar"
+                style="@style/Widget.Arcade.BotaoContorno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaco_p"
+                android:layout_weight="1"
+                android:text="@string/acao_limpar" />
+        </LinearLayout>
+
+        <!-- Painel de resultado: aparece com a animação XML resultado_entrada -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/painelResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_gg"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/arcade_superficie_alta"
+            app:strokeColor="@color/neon_ciano"
+            tools:visibility="visible">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/espaco_g"
+                android:shrinkColumns="1"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Texto.Arcade.Overline"
+                        android:layout_marginEnd="@dimen/espaco_g"
+                        android:text="@string/scanner_cabecalho_medida" />
+
+                    <TextView
+                        style="@style/Texto.Arcade.Overline"
+                        android:text="@string/scanner_cabecalho_resultado" />
+                </TableRow>
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:layout_marginBottom="@dimen/espaco_xs"
+                    android:background="@color/arcade_borda" />
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Texto.Arcade.Tabela"
+                        android:layout_marginEnd="@dimen/espaco_g"
+                        android:text="@string/scanner_caracteres" />
+
+                    <TextView
+                        android:id="@+id/valorCaracteres"
+                        style="@style/Texto.Arcade.Tabela"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        tools:text="3" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Texto.Arcade.Tabela"
+                        android:layout_marginEnd="@dimen/espaco_g"
+                        android:text="@string/scanner_palavras" />
+
+                    <TextView
+                        android:id="@+id/valorPalavras"
+                        style="@style/Texto.Arcade.Tabela"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        tools:text="1" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Texto.Arcade.Tabela"
+                        android:layout_marginEnd="@dimen/espaco_g"
+                        android:text="@string/scanner_vogais" />
+
+                    <TextView
+                        android:id="@+id/valorVogais"
+                        style="@style/Texto.Arcade.Tabela"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        tools:text="2" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Texto.Arcade.Tabela"
+                        android:layout_marginEnd="@dimen/espaco_g"
+                        android:text="@string/scanner_invertido" />
+
+                    <TextView
+                        android:id="@+id/valorInvertido"
+                        style="@style/Texto.Arcade.Tabela"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        tools:text="anA" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/Texto.Arcade.Tabela"
+                        android:layout_marginEnd="@dimen/espaco_g"
+                        android:text="@string/scanner_palindromo" />
+
+                    <TextView
+                        android:id="@+id/valorPalindromo"
+                        style="@style/Texto.Arcade.Tabela"
+                        android:fontFamily="monospace"
+                        android:textStyle="bold"
+                        tools:text="Sim" />
+                </TableRow>
+            </TableLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/textoExemplos"
+            style="@style/Texto.Arcade.Legenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_gg"
+            android:text="@string/scanner_exemplos" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
